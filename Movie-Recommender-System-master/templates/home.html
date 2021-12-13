@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="shadow p-3 mb-5 bg-white rounded">
+  <h1 style="color:black">Welcome to the Anime recommender!!</h1>
+  <h3 style="color:black">Enter your favourite anime to get the recommendations.</h3>
+</div>
+
+  <form action="{{url_for('recommend')}}">
+    <input type="text" name="movie" class="form-control" placeholder="Anime name here">
+    <br>
+    <input style="font-size:24px;background-color:lightgray;color:black" type="submit" class="btn btn-info" value="Enter">
+  </form>
+{% endblock %}

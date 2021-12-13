@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+
+  {% if t=='s' %}
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <h3 style="color:black">Sorry! This anime is not in our database.</h3>
+    <h3 style="color:black">Please check if you spelled it correct.</h3>
+    <h3 style="color:black">Or try with another anime.</h3>
+  </div>
+
+  {% else %}
+  <div class="shadow p-3 mb-5 bg-white rounded">
+    <h1 style="font-family:Verdana, Geneva, Tahoma, sans-serif;color:black">"{{movie}}" is a great choice.</h1>
+    <h3 style="color:black">Here are some more like this :)</h3>
+  </div>
+
+    <ul class="list-group list-group-flush">
+      {% for m in r %}
+        <li class="list-group-item" style="text-align:center;color:slategrey"><strong>{{m}}</strong></li>
+      {% endfor %}
+    </ul>
+    <h4 style="margin-top:50px;text-align:center">Yayyy! Go watch and enjoy ;)</h4>
+  {% endif %}
+
+{% endblock %}
